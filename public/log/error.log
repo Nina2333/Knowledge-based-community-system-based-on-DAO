@@ -1,0 +1,56 @@
+2023-03-13T08:04:14.726Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
+2023-03-13T08:09:48.878Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
+2023-03-13T08:11:02.702Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
+2023-03-14T12:27:49.675Z error: ER_NO_DEFAULT_FOR_FIELD: Field 'role' doesn't have a default value
+2023-03-21T03:08:45.601Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?)' at line 1
+2023-03-21T03:13:29.459Z error: ER_BAD_NULL_ERROR: Column 'c_name' cannot be null
+2023-03-21T03:16:54.158Z error: ER_TRUNCATED_WRONG_VALUE: Incorrect datetime value: '1679368614155' for column 'time' at row 1
+2023-03-21T03:21:39.031Z error: ER_BAD_NULL_ERROR: Column 'account' cannot be null
+2023-03-21T03:21:42.108Z error: ER_BAD_NULL_ERROR: Column 'account' cannot be null
+2023-03-21T14:29:59.485Z error: ER_BAD_NULL_ERROR: Column 'account' cannot be null
+2023-03-28T03:31:09.506Z error: ER_BAD_NULL_ERROR: Column 'account' cannot be null
+2023-03-28T03:31:09.514Z error: ER_BAD_NULL_ERROR: Column 'userAddress' cannot be null
+2023-03-28T03:32:17.209Z error: ER_BAD_NULL_ERROR: Column 'account' cannot be null
+2023-03-28T03:32:17.211Z error: ER_BAD_NULL_ERROR: Column 'userAddress' cannot be null
+2023-03-28T08:51:52.354Z error: ER_BAD_NULL_ERROR: Column 'account' cannot be null
+2023-03-28T08:51:52.364Z error: ER_BAD_NULL_ERROR: Column 'userAddress' cannot be null
+2023-03-28T08:51:52.377Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
+2023-03-28T08:52:46.440Z error: ER_BAD_NULL_ERROR: Column 'communityID' cannot be null
+2023-03-29T01:58:56.879Z error: ER_NO_SUCH_TABLE: Table 'knowledge.article' doesn't exist
+2023-03-31T09:23:36.771Z error: ER_BAD_NULL_ERROR: Column 'communityId' cannot be null
+2023-04-01T05:52:18.621Z error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: 'gFQszxfTPhuEzJCsm4WNdpAKabtxaOrK' for column 'communityId' at row 1
+2023-04-01T06:01:01.242Z error: ER_BAD_NULL_ERROR: Column 'topic' cannot be null
+2023-04-01T06:06:59.905Z error: ER_BAD_NULL_ERROR: Column 'topic' cannot be null
+2023-04-01T06:14:45.986Z error: ER_DATA_TOO_LONG: Data too long for column 'detail' at row 1
+2023-04-01T08:06:01.298Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
+2023-04-01T10:45:44.148Z error: ER_EMPTY_QUERY: Query was empty
+2023-04-01T10:47:38.212Z error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2023-04-01T10:55:03.250Z error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2023-04-01T10:55:09.785Z error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2023-04-01T10:56:59.602Z error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2023-04-03T01:10:50.374Z error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2023-04-03T01:16:54.589Z error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2023-04-03T01:17:41.304Z error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2023-04-03T09:12:26.380Z error: WARN_DATA_TRUNCATED: Data truncated for column 'startTime' at row 1
+2023-04-03T09:16:09.336Z error: WARN_DATA_TRUNCATED: Data truncated for column 'startTime' at row 1
+2023-04-03T09:21:48.071Z error: ER_WARN_DATA_OUT_OF_RANGE: Out of range value for column 'startTime' at row 1
+2023-04-03T09:23:18.765Z error: ER_WARN_DATA_OUT_OF_RANGE: Out of range value for column 'startTime' at row 1
+2023-04-03T09:23:54.583Z error: ER_WARN_DATA_OUT_OF_RANGE: Out of range value for column 'startTime' at row 1
+2023-04-03T09:27:40.334Z error: ER_WARN_DATA_OUT_OF_RANGE: Out of range value for column 'startTime' at row 1
+2023-04-06T03:14:28.713Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-accounts where draftId='1'' at line 1
+2023-04-06T03:14:53.824Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-accounts where draftId='1'' at line 1
+2023-04-06T03:16:04.843Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-accounts where draftId='1'' at line 1
+2023-04-06T03:17:18.814Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-accounts where draftId='1'' at line 1
+2023-04-06T03:17:34.161Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-accounts where draftId='1'' at line 1
+2023-04-06T03:20:40.922Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-accounts where draftId='1'' at line 1
+2023-04-06T03:24:12.397Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-accounts where draftId='1'' at line 1
+2023-04-07T00:41:31.027Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'option) VALUES(NULL,'0x9Dcf17A9E5fa89E27bf6bB4Fd3843230DF450D99',NULL,?)' at line 1
+2023-04-07T00:49:17.651Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'option) VALUES('1','0x9Dcf17A9E5fa89E27bf6bB4Fd3843230DF450D99','agree',?)' at line 1
+2023-04-07T00:50:11.837Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'option) VALUES('1','0x9Dcf17A9E5fa89E27bf6bB4Fd3843230DF450D99','agree')' at line 1
+2023-04-07T00:58:37.316Z error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'option) VALUES('1','0x9Dcf17A9E5fa89E27bf6bB4Fd3843230DF450D99','agree')' at line 1
+2023-04-07T01:00:34.250Z error: ER_DUP_ENTRY: Duplicate entry '1' for key 'PRIMARY'
+2023-04-10T02:17:32.457Z error: ER_DATA_TOO_LONG: Data too long for column 'draftDetail' at row 1
+2023-04-10T02:18:28.454Z error: ER_DATA_TOO_LONG: Data too long for column 'draftDetail' at row 1
+2023-04-10T02:18:34.383Z error: ER_DATA_TOO_LONG: Data too long for column 'draftDetail' at row 1
+2023-04-10T06:30:28.798Z error: ER_DATA_TOO_LONG: Data too long for column 'name' at row 1
+2023-04-10T08:12:36.964Z error: ER_NO_SUCH_TABLE: Table 'knowledge.comments' doesn't exist

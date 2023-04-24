@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>Signin Template · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/stylesheets/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .article {
+            border: none;
+            background: transparent;
+        }
+
+        .comment {
+            background: transparent;
+        }
+
+        :focus-visible {
+            outline: 0 !important;
+        }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <!--    <link href="/stylesheets/css/sign-in.css" rel="stylesheet">-->
+</head>
+<body class="text-center">
+
+<%- include('head.ejs') %>
+
+<div class="container py-4">
+    <br>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/community">文章列表</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/community/addArticle">创建文章</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid py-5">
+            <div class="d-flex justify-content-between">
+                <img class="bi me-2 fade" width="23" height="23" role="img" src="/images/double.png">
+                <img class="bi me-2 " width="23" height="23" role="img" src="/images/double.png">
+            </div>
+            <h1 class="p-4 mb-2"><%= article[0].aName %></h1>
+
+            <p><small>创建时间： <%= timestampToDate(article[0].publishTime) %></small></p>
+
+            <p class="lead"><%= article[0].topic %></p>
+            <hr/>
+            <textarea class="article lead" rows="20" cols="126"><%= article[0].detail %></textarea>
+            <!--            <button class="btn btn-primary btn-lg" type="button">Example button</button>-->
+            <hr>
+            <div class="d-flex w-100 justify-content-between">
+                <p><strong>作者：<%= article[0].publisher %></strong></p>
+                <div>
+                    <img class="bi me-2" width="23" height="23" role="img" src="/images/success.png">
+                    <img class="bi me-2" width="23" height="23" role="img" src="/images/no.png">
+                    <img class="bi me-2" width="23" height="23" role="img" src="/images/7.png">
+                    <a href="#" class="position-relative">
+                        <img class="bi me-2 " width="23" height="23" role="img" src="/images/8.png">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <%= comments.length %>
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="py-3">
+            <form action="/community/articleComment?aid=<%= article[0].articleId %>" method="post">
+                <div class="input-group">
+                    <textarea name="comment" class="form-control" cols="126" rows="2"></textarea>
+                    <button class="btn btn-primary">发布评论</button>
+                </div>
+            </form>
+
+            <div class="list-group py-4">
+
+                <% for (var i = 0;i < comments.length;i++){ %>
+                    <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1">用户：<%= comments[i].userAddress %></h6>
+                        <div>
+                            <a href="#" class="btn">回复</a>
+                            <small><%= timestampToDate(comments[i].commT) %></small>
+                        </div>
+                    </div>
+                    <div class="d-flex w-100 justify-content-between">
+                        <p class="mb-1 d-flex"><%= comments[i].comment %></p>
+                        <div>
+                            <img class="bi me-2" width="17" height="17" role="img" src="/images/success.png">
+                            <img class="bi me-2" width="17" height="17" role="img" src="/images/no.png">
+                            <img class="bi me-2" width="17" height="17" role="img" src="/images/double.png">
+                        </div>
+                    </div>
+
+                    <hr>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <%- include('foot.ejs') %>
+</body>
+
+</html>

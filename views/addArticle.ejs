@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<!--<form action="/createCommunity" method="post" enctype="multipart/form-data">-->
+<!--    <input type="file" name="fileInput" accept="image/*"/>-->
+<!--    <button class="w-100 btn btn-primary btn-lg" type="submit">上传</button>-->
+<!--</form>-->
+
+
+<!--<form action="/postFile" method="post" enctype="multipart/form-data">-->
+
+<!--    <input id="postFile" type="file" name="logo">-->
+<!--    <button type="submit">上传</button>-->
+<!--</form>-->
+<%- include('head.ejs') %>
+<div class="container">
+
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="/images/3.svg" alt="" width="72" height="57">
+        <h3>创建文章</h3>
+        <p>欢迎来到我们的知识社区文章创建页面！我们的社区致力于为大家提供一个共享知识和经验的平台。
+            我们相信每个人都有独特的想法和经验，而这些想法和经验可以为他人带来启发和帮助。因此，我们邀请您加入我们的社区，与全球的知识分享者们一起创造一个更美好的世界。创建过程非常简单，只需填写一些基本信息即可。快来加入我们吧！</p>
+    </div>
+
+    <div class="row g-5">
+        <div class="modal-body p-5 col-md-5 col-lg-4 order-md-last">
+            <h2 class="fw-bold mb-0">你将收获到</h2>
+
+            <ul class="d-grid gap-4 my-5 list-unstyled">
+                <li class="d-flex gap-4">
+                    <!--                    <svg class="bi text-muted flex-shrink-0" width="48" height="48">-->
+                    <!--                        <use xlink:href="#friends"></use>-->
+                    <!--                    </svg>-->
+                    <img src="/images/2.svg" alt="twbs" width="48" height="48" class="rounded-circle flex-shrink-0">
+                    <div>
+                        <h5 class="mb-0">兴趣相投的伙伴</h5>
+                        A partner with similar interests
+                    </div>
+                </li>
+                <li class="d-flex gap-4">
+                    <img src="/images/4.svg" alt="twbs" width="48" height="48" class="rounded-circle flex-shrink-0">
+                    <div>
+                        <h5 class="mb-0">丰富的社区活动</h5>
+                        Rich community activities
+                    </div>
+                </li>
+                <li class="d-flex gap-4">
+                    <img src="/images/5.svg" alt="twbs" width="48" height="48" class="rounded-circle flex-shrink-0">
+                    <div>
+                        <h5 class="mb-0">参与社区的决策发展</h5>
+                        Participate in the decision-making development of the community
+                    </div>
+                </li>
+                <li class="d-flex gap-4">
+                    <img src="/images/6.svg" alt="twbs" width="48" height="48" class="rounded-circle flex-shrink-0">
+                    <div>
+                        <h5 class="mb-0">学习到多种多样的知识</h5>
+                        Learn a variety of knowledge
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-7 col-lg-8">
+            <h3 class="mb-3">文章内容</h3>
+            <hr>
+            <form class="needs-validation" action="/community/postArticle" method="post">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <h5> 作者： <%= account %></h5>
+                    </div>
+                    <div class="col-12">
+
+                        <label for="aName" class="form-label">标题</label>
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="aName" name="aName" placeholder="article name" required>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="topic" class="form-label">简介</label>
+                        <input type="text" class="form-control" id="topic" name="topic" placeholder="article topic" required>
+<!--                        <div class="invalid-feedback">-->
+<!--                            Please enter the community topic.-->
+<!--                        </div>-->
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group">
+                            <span class="input-group-text">文章内容</span>
+                            <textarea class="form-control" rows="20"  id="detail" name="detail" placeholder="" required aria-label="With textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-primary btn-lg" type="submit">确定创建</button>
+            </form>
+        </div>
+    </div>
+    <%- include('foot.ejs') %>
+</div>
+
+</body>
+</html>
+
